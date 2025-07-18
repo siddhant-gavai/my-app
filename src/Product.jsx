@@ -1,23 +1,22 @@
 import "./Product.css";
-function product({ title, price, features }) {
-  let isDiscounted = price > 30000;
-  let styles = {
-    color: "blue",
-    backgroundColor: isDiscounted ? "lightgray" : null,
-    padding: "10px",
-    borderRadius: "5px",
-  };
+import Price from "./Price";
+
+function Product({ title = "Apple Mouse", idx }) {
+  let oldPrice = ["1212", "2545", "1234", "2345"];
+  let newPrice = ["1000", "2000", "1500", "1800"];
+  let Description = [
+    ["This is a great product", "It has amazing features"],
+    ["This is an amazing product", "It is very useful"],
+    ["This is a fantastic product", "It has great quality"],
+    ["This is a superb product", "It is very affordable"],
+  ];
   return (
-    <div className="Product" style={styles}>
-      <h2> {title} </h2>
-      <h4> Price : {price} </h4>
-      <ul>
-        {features.map((feature, index) => (
-          <li key={index}>{feature}</li>
-        ))}
-      </ul>
-      {isDiscounted ? <p>Discounted of product 5% </p> : null}
+    <div className="Product">
+      <h1> {title} </h1>
+      <p> {Description[idx][0]} </p>
+      <p> {Description[idx][1]} </p>
+      <Price oldPrice={oldPrice[idx]} newPrice={newPrice[idx]} />
     </div>
   );
 }
-export default product;
+export default Product;

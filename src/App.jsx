@@ -1,12 +1,10 @@
 import "./App.css";
-import React from "react";
-import Title from "./Title";
-import MultipleButtons from "./MultipleButtons";
 import ProductTab from "./ProductTab";
 
 function App() {
   return (
     <>
+      <h2>Blockbuster Deals | Shop Now</h2>
       <ProductTab />
     </>
   );

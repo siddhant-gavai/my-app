@@ -1,14 +1,19 @@
 import Product from "./Product";
 
 function ProductTab() {
-  const options1 = ["4GB RAM", "64GB Storage", "5G Support"];
-  const options2 = ["8GB RAM", "512GB Storage"];
-  const options3 = ["16GB RAM", "1TB Storage"];
+  let styles = {
+    display: "flex",
+    flexWrap: "wrap",
+    justifyContent: "space-around",
+    alignItems: "center",
+    gap: "13px",
+  };
   return (
-    <div>
-      <Product title="Phone" price="20200" features={options1} />
-      <Product title=" Laptop" price="60099" features={options2} />
-      <Product title="Macbook" price="100000" features={options3} />
+    <div style={styles}>
+      <Product title="Product1" idx={0} />
+      <Product title="Product2" idx={1} />
+      <Product title="Product3" idx={2} />
+      <Product title="Product4" idx={3} />
     </div>
   );
 }
