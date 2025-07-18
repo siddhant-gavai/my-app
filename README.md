@@ -13,9 +13,5 @@ On Day 1, I practiced JSX, local development setup, component import/export, com
 - ✅ Structuring project with `components/` folder
 - ✅ Styling components using CSS
 
----
-
-## 📁 Project Structure Example
-
 npm install
 npm run dev
