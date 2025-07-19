@@ -1,5 +1,6 @@
-const doSomething = () => {
+const doSomething = (event) => {
   console.log("Button clicked!");
+  console.log(event);
 };
 
 const handleOver = () => {
